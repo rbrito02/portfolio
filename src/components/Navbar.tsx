@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
+import { AiOutlineDoubleLeft } from "react-icons/ai";
 
 const Navbar = () => {
 	return (

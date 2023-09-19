@@ -22,7 +22,7 @@ const Banner = () => {
 			>
 				Raudy Brito,{" "}
 				<span className="text-textDark mt-2 lgl:mt-4">
-					I'm a front-end developer.
+					I'm a full-stack developer.
 				</span>
 			</motion.h1>
 			<motion.p
@@ -31,10 +31,9 @@ const Banner = () => {
 				transition={{ duration: 0.5, delay: 0.8 }}
 				className="text-base md:max-w-[650px] text-textDark font-medium"
 			>
-				I am a web developer with 2+ years of experience in React. I have strong
-				foundsations in front-end & UI?UX and am skilled in creating
-				user-friendly and responsive web applcations using React and its
-				ecosystem.{" "}
+				I am a sophomore studying Computer Science at The University of Central
+				Florida. I have a passion for developing interactive, responsive, and
+				asthetic websites. <br />{" "}
 				<a href="#contact">
 					<span className="text-textGreen inline-flex relative cursor-pointer h-7 overflow-x-hidden group">
 						Contact Me

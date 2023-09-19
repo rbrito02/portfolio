@@ -18,7 +18,7 @@ function App() {
 				>
 					<LeftSide />
 				</motion.div>
-				<div className="h-[88vh] w-full p-4">
+				<div className="h-[88vh] w-full p-4 overflow-y-auto">
 					<Banner />
 					<About />
 				</div>

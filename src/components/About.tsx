@@ -1,3 +1,5 @@
+import WorkCard from "./WorkCard";
+
 const About = () => {
 	return (
 		<section
@@ -8,16 +10,43 @@ const About = () => {
 				About Me
 			</div>
 			<div className="flex">
-				<div className="text-base md:max-w-[650px] text-textDark font-medium">
+				<div className="w-1/2 text-base md:max-w-[650px] text-textDark font-medium">
 					I'm a front-end developer with 2+ years of experience in React. I have
 					strong foundations in front-end & UI/UX and am skilled in creating
 					user-friendly and responsive web applications using React and its
 					ecosystem.
 				</div>
 
-				<div className="text-lg font-titleFont tracking-wide text-textLight">
-					Experience
-				</div>
+				<section className="flex flex-col gap-20">
+					<WorkCard
+						company="Mathnasium"
+						position="Lead Instructor"
+						description="Helped teach kids math and do lots of things"
+						date="Sep 2022 - PRESENT"
+						skills={["math", "teamwork", "teaching"]}
+					/>
+					<WorkCard
+						company="Mathnasium"
+						position="Lead Instructor"
+						description="Helped teach kids math and do lots of things"
+						date="Sep 2022 - PRESENT"
+						skills={["math", "teamwork", "teaching"]}
+					/>
+					<WorkCard
+						company="Mathnasium"
+						position="Lead Instructor"
+						description="Helped teach kids math and do lots of things"
+						date="Sep 2022 - PRESENT"
+						skills={["math", "teamwork", "teaching"]}
+					/>
+					<WorkCard
+						company="Mathnasium"
+						position="Lead Instructor"
+						description="Helped teach kids math and do lots of things"
+						date="Sep 2022 - PRESENT"
+						skills={["math", "teamwork", "teaching"]}
+					/>
+				</section>
 			</div>
 		</section>
 	);

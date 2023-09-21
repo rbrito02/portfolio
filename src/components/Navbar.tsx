@@ -10,7 +10,7 @@ const Navbar = () => {
 					animate={{ opacity: 1 }}
 					transition={{ duration: 0.5 }}
 				>
-					<h1 className="text-lg lg:text-3xl text-textGreen">RB</h1>
+					<h1 className="text-lg lg:text-3xl text-[#BFDBFE]">RB</h1>
 				</motion.div>
 				<div className="hidden mdl:inline-flex items-center gap-7">
 					<ul className="flex text-[13px] gap-7">

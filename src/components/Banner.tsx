@@ -14,17 +14,20 @@ const Banner = () => {
 			>
 				Hi, my name is
 			</motion.h3>
-			<motion.h1
+			<motion.div
 				initial={{ y: 10, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.5, delay: 0.7 }}
-				className="text-4xl lgl:text-6xl font-titleFont font-semibold flex flex-col"
+				className="bg-gradient-to-tl from-violet-500 to-fuchsia-500 text-transparent bg-clip-text"
 			>
-				Raudy Brito,{" "}
-				<span className="text-textDark mt-2 lgl:mt-4">
-					I'm a full-stack developer.
-				</span>
-			</motion.h1>
+				<h1 className="text-4xl lgl:text-6xl font-titleFont font-semibold flex flex-col">
+					Raudy Brito,{" "}
+					<span className="text-textDark mt-2 lgl:mt-4">
+						I'm a full-stack developer.
+					</span>
+				</h1>
+			</motion.div>
+
 			<motion.p
 				initial={{ y: 10, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}

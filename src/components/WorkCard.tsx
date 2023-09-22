@@ -1,9 +1,9 @@
 import React from "react";
 import SkillTag from "./SkillTag";
 import { FaArrowUp } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 interface WorkCardProps {
-	key?: number;
 	company: string;
 	position: string;
 	description: string;
@@ -21,10 +21,13 @@ const WorkCard: React.FC<WorkCardProps> = ({
 	link,
 }) => {
 	const cardContent = (
-		<section
+		<motion.section
 			className={`flex group gap-2 rounded-lg hover:bg-slate-800/50 hover:shaodw-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg py-4 px-6 ${
 				link ? "cursor-pointer" : ""
 			}`}
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			transition={{ duration: 1.5 }}
 		>
 			{/**Left section */}
 			<div>
@@ -49,7 +52,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
 					{skills?.map((skill) => <SkillTag skill={skill} />)}
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 	return link ? (
 		<a href={link} target="_blank">

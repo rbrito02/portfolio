@@ -2,6 +2,7 @@ import About from "./components/About";
 import Banner from "./components/Banner";
 import LeftSide from "./components/LeftSide";
 import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
 import RightSide from "./components/RightSide";
 import { motion } from "framer-motion";
 
@@ -20,8 +21,10 @@ function App() {
 				</motion.div>
 				<div className="h-[88vh] w-full p-4 pb-20 overflow-y-auto ">
 					<Banner />
-					<div className="spacer h-28"></div>
+					<div className="spacer h-24" />
 					<About />
+					<div className="spacer h-24" />
+					<Projects />
 				</div>
 				<motion.div
 					initial={{ opacity: 0 }}

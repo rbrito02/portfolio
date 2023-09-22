@@ -1,11 +1,15 @@
 import React from "react";
+import SkillTag from "./SkillTag";
+import { FaArrowUp } from "react-icons/fa6";
 
 interface WorkCardProps {
+	key?: number;
 	company: string;
 	position: string;
 	description: string;
 	date: string;
 	skills?: string[];
+	link?: string;
 }
 
 const WorkCard: React.FC<WorkCardProps> = ({
@@ -14,30 +18,45 @@ const WorkCard: React.FC<WorkCardProps> = ({
 	description,
 	date,
 	skills,
+	link,
 }) => {
-	return (
-		<section className="flex group gap-2 hover:bg-slate-800/50 hover:shaodw-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg">
+	const cardContent = (
+		<section
+			className={`flex group gap-2 rounded-lg hover:bg-slate-800/50 hover:shaodw-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg py-4 px-6 ${
+				link ? "cursor-pointer" : ""
+			}`}
+		>
 			{/**Left section */}
 			<div>
 				<span className="text-sm text-textLight">{date}</span>
 			</div>
 			{/**Right section */}
-			<div className="flex flex-col">
-				<h3 className="text-lg font-titleFont tracking-wide text-white group-hover:text-textGreen">
-					{position} | {company}
-					<>{/**Arrow Icon */}</>
-				</h3>
+			<div className="flex flex-col ">
+				<div className="flex text-lg font-titleFont text-white gap-0.5">
+					<h3 className=" tracking-wide group-hover:text-textGreen">
+						{position} | {company}
+					</h3>
+					<span className="group-hover:text-textGreen mt-1 group-hover:-translate-y-1 group-hover:translate-x-1 transition ease-linear duration-150 rotate-45">
+						{" "}
+						<FaArrowUp />
+					</span>
+				</div>
 				<p className="text-base md:max-w-[650px] text-textDark font-medium">
 					{description}
 				</p>
 
-				<div className="flex gap-2">
-					{skills?.map((skill) => (
-						<span className="text-sm text-textLight">{skill}</span>
-					))}
+				<div className="flex flex-wrap gap-2">
+					{skills?.map((skill) => <SkillTag skill={skill} />)}
 				</div>
 			</div>
 		</section>
+	);
+	return link ? (
+		<a href={link} target="_blank">
+			{cardContent}
+		</a>
+	) : (
+		cardContent
 	);
 };
 

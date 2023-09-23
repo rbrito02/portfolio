@@ -23,7 +23,7 @@ function App() {
 					<Banner />
 					<div className="spacer h-28" />
 					<About />
-					<div className="spacer h-24" />
+
 					<Projects />
 				</div>
 				<motion.div

@@ -6,14 +6,14 @@ const About = () => {
 	return (
 		<motion.section
 			id="about"
-			className="max-w-contentContainer mx-auto py-10 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4"
+			className="max-w-contentContainer mx-auto pt-10 mdl:pt-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4 "
 		>
-			<div className="flex">
+			<div className="flex mb-3">
 				<motion.h1
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ delay: 1.5 }}
-					className="text-textLight text-2xl font-semibold tracking-wide mb-2"
+					className="text-textLight text-2xl font-semibold tracking-wide"
 				>
 					About Me
 				</motion.h1>
@@ -24,7 +24,7 @@ const About = () => {
 					className="w-60 mt-4 ml-6 h-0.5 bg-slate-500"
 				></motion.div>
 			</div>
-			<section className="flex">
+			<section className="flex gap-16">
 				<div className="w-1/2 text-base md:max-w-[650px] text-textDark font-medium flex flex-col gap-4">
 					<motion.p
 						initial={{ opacity: 0 }}

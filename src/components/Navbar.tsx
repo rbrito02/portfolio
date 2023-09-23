@@ -47,18 +47,7 @@ const Navbar = () => {
 								<span className="text-textGreen">01.</span> About
 							</motion.li>
 						</button>
-						<button
-							onClick={() => handleNavClick("experience")}
-							className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
-						>
-							<motion.li
-								initial={{ y: -10, opacity: 0 }}
-								animate={{ y: 0, opacity: 1 }}
-								transition={{ duration: 0.1, delay: 0.2 }}
-							>
-								<span className="text-textGreen">02.</span> Experience
-							</motion.li>
-						</button>
+
 						<button
 							onClick={() => handleNavClick("projects")}
 							className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
@@ -68,7 +57,7 @@ const Navbar = () => {
 								animate={{ y: 0, opacity: 1 }}
 								transition={{ duration: 0.1, delay: 0.3 }}
 							>
-								<span className="text-textGreen">03.</span> Projects
+								<span className="text-textGreen">02.</span> Projects
 							</motion.li>
 						</button>
 						<button
@@ -80,7 +69,7 @@ const Navbar = () => {
 								animate={{ y: 0, opacity: 1 }}
 								transition={{ duration: 0.1, delay: 0.4 }}
 							>
-								<span className="text-textGreen">04.</span> Contact
+								<span className="text-textGreen">03.</span> Contact
 							</motion.li>
 						</button>
 					</ul>

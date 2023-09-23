@@ -49,7 +49,9 @@ const WorkCard: React.FC<WorkCardProps> = ({
 				</p>
 
 				<div className="flex flex-wrap gap-2">
-					{skills?.map((skill) => <SkillTag skill={skill} />)}
+					{skills?.map((skill, index) => (
+						<SkillTag key={index} skill={skill} />
+					))}
 				</div>
 			</div>
 		</motion.section>

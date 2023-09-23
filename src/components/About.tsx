@@ -73,15 +73,19 @@ const About = () => {
 
 				<section className="flex flex-col">
 					{workData.map(
-						(work: {
-							company: string;
-							position: string;
-							description: string;
-							date: string;
-							skills: string[] | undefined;
-							link: string | undefined;
-						}) => (
+						(
+							work: {
+								company: string;
+								position: string;
+								description: string;
+								date: string;
+								skills: string[] | undefined;
+								link: string | undefined;
+							},
+							index: number
+						) => (
 							<WorkCard
+								key={index}
 								company={work.company}
 								position={work.position}
 								description={work.description}

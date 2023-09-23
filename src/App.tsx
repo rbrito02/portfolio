@@ -21,7 +21,7 @@ function App() {
 				</motion.div>
 				<div className="h-[88vh] w-full p-4 pb-20 overflow-y-auto ">
 					<Banner />
-					<div className="spacer h-24" />
+					<div className="spacer h-28" />
 					<About />
 					<div className="spacer h-24" />
 					<Projects />

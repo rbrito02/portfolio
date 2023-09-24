@@ -10,7 +10,7 @@ const featuredData = [
 	},
 	{
 		isImageLeft: false,
-		image: "/assets/images/Quackademy.png",
+		image: "/assets/images/playshogi.png",
 		name: "PlayShogi",
 		description:
 			"An online way to play shogi, including computer opponents and online multiplayer. Packed with user auth, friends list, and match history.",

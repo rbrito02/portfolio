@@ -17,20 +17,22 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = (props) => {
 			initial={{ opacity: 0 }}
 			transition={{ delay: 1 }}
 			whileInView={{ opacity: 1 }}
-			className="flex gap-4 group"
+			className={`flex gap-8 group ${
+				props.isImageLeft ? "justify-start" : "justify-end"
+			} items-center`}
 		>
 			<div
 				className={`${
 					props.isImageLeft ? "w-1/3" : "w-1/3 order-last relative"
 				}`}
 			>
-				<div className="bg-textGreen/40 w-full h-full flex justify-center">
-					<div className="h-full w-5/6">
+				<div className="bg-textGreen/10 rounded-xl overflow-hidden w-full h-full flex justify-center">
+					<div className="h-4/5 w-5/6 grayscale group-hover:filter-none duratoin-150 transition">
 						<img src={props.image} alt={props.name} />
 					</div>
 				</div>
 			</div>
-			<div className="w-1/2 flex flex-col ml">
+			<div className="w-1/2 flex flex-col ml bg-textGreen/10 rounded-xl py-4 px-4">
 				<div className="flex gap-2">
 					<h2 className="text-xl text-violet-400 ">{props.name}</h2>
 					<a

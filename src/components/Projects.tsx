@@ -26,17 +26,27 @@ const Projects = () => {
 					className="w-60 mt-4 ml-6 h-0.5 bg-slate-500"
 				></motion.div>
 			</div>
-			{featuredData.map((project, index) => (
-				<FeaturedProject
-					key={index}
-					isImageLeft={project.isImageLeft}
-					image={project.image}
-					name={project.name}
-					description={project.description}
-					technologies={project.technologies}
-					githubLink={project.githubLink}
-				/>
-			))}
+			<div className="flex flex-col gap-8">
+				{featuredData.map((project, index) => (
+					<motion.div
+						initial={{ opacity: 0 }}
+						viewport={{ once: true }}
+						transition={{ delay: 0.75 }}
+						whileInView={{ opacity: 1 }}
+						className="bg-textGreen/10 py-6 px-3 rounded-xl flex justify-center content-center"
+					>
+						<FeaturedProject
+							key={index}
+							isImageLeft={project.isImageLeft}
+							image={project.image}
+							name={project.name}
+							description={project.description}
+							technologies={project.technologies}
+							githubLink={project.githubLink}
+						/>
+					</motion.div>
+				))}
+			</div>
 		</section>
 	);
 };

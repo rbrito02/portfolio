@@ -1,35 +1,5 @@
-container {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.scrolling-words-container {
-  display: flex;
-  align-items: center;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-.scrolling-words-box {
-  height: 3rem;
-  margin: auto;
-  overflow: hidden;
-}
-
 .scrolling-words-box ul {
-  margin: 0 0.625rem;
-  padding: 0;
-  animation: scrollUp 4s infinite;
-}
-
-.scrolling-words-box ul li {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 3rem;
-  list-style: none;
+  animation: scrollUp 6s infinite;
 }
 
 @keyframes scrollUp {

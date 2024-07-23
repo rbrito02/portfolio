@@ -39,13 +39,13 @@ const EmailSection = ({ scrollYProgress }) => {
     //     }
     // };
 
-    const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-    const rotate = useTransform(scrollYProgress, [0, 1], [5, 0]);
+    const scale = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+    const rotate = useTransform(scrollYProgress, [0, 1], [8, 0]);
     return (
         <motion.section
-            style={{ scale, rotate, zIndex: 2 }}
+            style={{ scale, rotate, }}
             id="contact"
-            className="relative h-screen grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 bg-[#121212] "
+            className="relative h-screen grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 bg-[#121212] flex items-center justify-center"
         >
             <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
             <div className="z-10">

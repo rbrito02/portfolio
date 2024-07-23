@@ -10,10 +10,10 @@ import Link from "next/link";
 
 const HeroSection = ({ scrollYProgress }) => {
 
-    const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8])
-    const rotate = useTransform(scrollYProgress, [0, 1], [0, -5])
+    const scale = useTransform(scrollYProgress, [0, 1], [1, 0.6])
+    const rotate = useTransform(scrollYProgress, [0, 1], [0, -8])
     return (
-        <motion.section style={{ scale, rotate, zIndex: 1 }} className="sticky top-0 h-screen lg:py-16 flex flex-col justify-center pb-[10vh]">
+        <motion.section style={{ scale, rotate }} className="sticky top-0 h-screen lg:py-16 flex flex-col justify-center pb-[10vh]">
             <div className="grid grid-cols-1 sm:grid-cols-12 bg-[#121212]">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}

@@ -5,13 +5,16 @@ import { Button } from "@/components/ui/button";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import { TypeAnimation } from "react-type-animation";
-import { motion } from "framer-motion";
+import { motion, useTransform } from "framer-motion";
 import Link from "next/link";
 
-const HeroSection = () => {
+const HeroSection = ({ scrollYProgress }) => {
+
+    const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8])
+    const rotate = useTransform(scrollYProgress, [0, 1], [0, -5])
     return (
-        <section className="lg:py-16">
-            <div className="grid grid-cols-1 sm:grid-cols-12">
+        <motion.section style={{ scale, rotate, zIndex: 1 }} className="sticky top-0 h-screen lg:py-16 flex flex-col justify-center pb-[10vh]">
+            <div className="grid grid-cols-1 sm:grid-cols-12 bg-[#121212]">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -57,7 +60,7 @@ const HeroSection = () => {
                     </div>
                 </motion.div>
             </div>
-        </section>
+        </motion.section>
     );
 };
 
